@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<style>
+  .image-container {
+    margin:100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:80%;
+    height: 300px; /* Adjust the height as needed */
+    background-color: #f0f0f0; /* Background color of the container */
+  }
+
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+    border: 2px solid #333; /* Add a border */
+    border-radius: 10px; /* Add rounded corners */
+  }
+</style>
+<div class="container">
+  <div class="concept">
+    <h2>Bond: Fical Policy With Examples and <br>  How They Are Priced</h2>
+    Fiscal policy is a critical component of a country's economic management. It involves the government's decisions regarding taxation, spending, and borrowing to influence the economy's overall health and stability. Fiscal policy is typically used to achieve specific economic objectives and can be expansionary or contractionary in nature.
+
+</p>      <div class="image-container">
+  <img src="{% static 'image/1.jpg' %}" alt="Image Description">
+</div>
+  </div>
+  <div class="concept">
+    <h2>How fiscal policy works?</h2>
+    In an expansionary fiscal policy, the government increases its spending and reduces taxes to stimulate economic growth. This approach is often employed during economic downturns or recessions to boost consumer and business spending, create jobs, and revitalize the economy. Lower taxes and increased public investment can lead to increased consumer confidence and higher demand for goods and services.       <div class="image-container">
+  <img src="{% static 'image/1.jpg' %}" alt="Image Description">
+</div>
+  </div>
+  
+  <div class="concept">
+    <h2>
+     Fiscal Policy
+    </h2>
+    In an expansionary fiscal policy, the government increases its spending and reduces taxes to stimulate economic growth. This approach is often employed during economic downturns or recessions to boost consumer and business spending, create jobs, and revitalize the economy. Lower taxes and increased public investment can lead to increased consumer confidence and higher demand for goods and services.
+
+</p>       <div class="image-container">
+  <img src="{% static 'image/1.jpg' %}" alt="Image Description">
+</div>
+  </div>
+</div>
+{% endblock %}

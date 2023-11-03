@@ -1,0 +1,2084 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Home</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+</head>
+<style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+}
+/* home page css */
+/* home page css */
+nav{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  height: 100px;
+  background: #0e0f0f;
+  box-shadow: 0 1px 2px rgb(0, 0, 0);
+  z-index: 99;
+}
+nav .navbar{
+  height: 100%;
+  
+  max-width: 1500px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+  /* background: red; */
+  padding: 0 50px;
+}
+.navbar .logo h3{
+      color: #007bff;
+      background-color: #007bff;
+}
+.navbar .logo a{
+  font-size: 30px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: -30px;
+  
+}
+nav .navbar .nav-links{
+  line-height: 70px;
+  height: 100%;
+}
+nav .navbar .links{
+  display: flex;
+}
+nav .navbar .links li{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0 14px;
+}
+nav .navbar .links li a{
+  height: 100%;
+  text-decoration: none;
+  white-space: nowrap;
+  color: #fff;
+  font-size: 20px;
+  margin-top: 17px;
+  font-weight: 500;
+}
+.links li:hover .htmlcss-arrow,
+.links li:hover .js-arrow{
+  transform: rotate(180deg);
+  }
+
+nav .navbar .links li .arrow{
+  /* background: red; */
+  height: 100%;
+  width: 22px;
+  line-height: 70px;
+  text-align: center;
+  display: inline-block;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+nav .navbar .links li .sub-menu{
+  position: absolute;
+  top: 70px;
+  left: 0;
+  line-height: 40px;
+  background: #0e0f0f;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 0 0 4px 4px;
+  display: none;
+  z-index: 2;
+}
+nav .navbar .links li:hover .htmlCss-sub-menu,
+nav .navbar .links li:hover .js-sub-menu{
+  display: block;
+}
+.navbar .links li .sub-menu li{
+  padding: 0 22px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.navbar .links li .sub-menu a{
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+}
+.navbar .links li .sub-menu .more-arrow{
+  line-height: 40px;
+}
+
+.navbar .links li .sub-menu .more-sub-menu{
+  position: absolute;
+  top: 0;
+  left: 100%;
+  border-radius: 0 4px 4px 4px;
+  z-index: 1;
+  display: none;
+}
+.links li .sub-menu .more:hover .more-sub-menu{
+  display: block;
+}
+.navbar .search-box{
+  position: relative;
+   height: 40px;
+  width: 40px;
+}
+.navbar .search-box i{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  line-height: 40px;
+  text-align: center;
+  font-size: 22px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.navbar .search-box .input-box{
+  position: absolute;
+  right: calc(100% - 40px);
+  top: 80px;
+  height: 60px;
+  width: 300px;
+  background: #0e0f0f;
+  border-radius: 6px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s ease;
+}
+.navbar.showInput .search-box .input-box{
+  top: 65px;
+  opacity: 1;
+  pointer-events: auto;
+  background: #0e0f0f;
+}
+.search-box .input-box::before{
+  content: '';
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  background: #0e0f0f;
+  right: 10px;
+  top: -6px;
+  transform: rotate(45deg);
+}
+.search-box .input-box input{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 4px;
+  transform: translate(-50%, -50%);
+  height: 35px;
+  width: 280px;
+  outline: none;
+  padding: 0 15px;
+  font-size: 16px;
+  border: none;
+}
+.navbar .nav-links .sidebar-logo{
+  display: none;
+}
+.navbar .bx-menu{
+  display: none;
+}
+@media (max-width:920px) {
+  nav .navbar{
+    max-width: 100%;
+    padding: 0 25px;
+  }
+
+  nav .navbar .logo a{
+    font-size: 27px;
+  }
+  nav .navbar .links li{
+    padding: 0 10px;
+    white-space: nowrap;
+  }
+  nav .navbar .links li a{
+    font-size: 15px;
+  }
+}
+@media (max-width:800px){
+  
+  .navbar .bx-menu{
+    display: block;
+  }
+  nav .navbar .nav-links{
+    position: fixed;
+    top: 0;
+    left: -100%;
+    display: block;
+    max-width: 270px;
+    width: 100%;
+    background:  #0e0f0f;
+    line-height: 40px;
+    padding: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.5s ease;
+    z-index: 1000;
+  }
+  .navbar .nav-links .sidebar-logo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .sidebar-logo .logo-name{
+    font-size: 25px;
+    color: #fff;
+  }
+    .sidebar-logo  i,
+    .navbar .bx-menu{
+      font-size: 25px;
+      color: #fff;
+    }
+  nav .navbar .links{
+    display: block;
+    margin-top: 20px;
+  }
+  nav .navbar .links li .arrow{
+    line-height: 40px;
+  }
+nav .navbar .links li{
+    display: block;
+  }
+nav .navbar .links li .sub-menu{
+  position: relative;
+  top: 0;
+  box-shadow: none;
+  display: none;
+}
+nav .navbar .links li .sub-menu li{
+  border-bottom: none;
+
+}
+.navbar .links li .sub-menu .more-sub-menu{
+  display: none;
+  position: relative;
+  left: 0;
+}
+.navbar .links li .sub-menu .more-sub-menu li{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.links li:hover .htmlcss-arrow,
+.links li:hover .js-arrow{
+  transform: rotate(0deg);
+  }
+  .navbar .links li .sub-menu .more-sub-menu{
+    display: none;
+  }
+  .navbar .links li .sub-menu .more span{
+    /* background: red; */
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+  }
+
+  .links li .sub-menu .more:hover .more-sub-menu{
+    display: none;
+  }
+  nav .navbar .links li:hover .htmlCss-sub-menu,
+  nav .navbar .links li:hover .js-sub-menu{
+    display: none;
+  }
+.navbar .nav-links.show1 .links .htmlCss-sub-menu,
+  .navbar .nav-links.show3 .links .js-sub-menu,
+  .navbar .nav-links.show2 .links .more .more-sub-menu{
+      display: block;
+    }
+    .navbar .nav-links.show1 .links .htmlcss-arrow,
+    .navbar .nav-links.show3 .links .js-arrow{
+        transform: rotate(180deg);
+}
+    .navbar .nav-links.show2 .links .more-arrow{
+      transform: rotate(90deg);
+    }
+}
+@media (max-width:370px){
+  nav .navbar .nav-links{
+  max-width: 100%;
+} 
+}
+
+/* navbar ends */
+#section
+{
+  margin-top: 15vh;
+  background-color: transparent;
+}
+.wrapper{
+  background:black;
+  position: relative;
+  width: 100%;
+ z-index: 999;
+}
+.wrapper nav{
+      display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 0%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+    background: rgba(0, 0, 0, 0.);
+    
+    height: 15%;
+
+}
+nav .content{
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  
+}
+nav .content .links{
+  margin-left: 80px;
+  display: flex;
+  width: 100%;
+ 
+}
+.content .logo h3
+{
+      color: #007bff;
+}
+.content .logo a{
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+}
+.content .links li{
+  list-style: none;
+  line-height: 70px;
+}
+.content .links li a,
+.content .links li label{
+  color: #fff;
+  font-size: 19px;
+  font-weight: 500;
+  padding: 9px 17px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+.content .links li label{
+  display: none;
+}
+.content .links li a:hover,
+.content .links li label:hover{
+  background: #323c4e;
+}
+.wrapper .search-icon,
+.wrapper .menu-icon{
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  line-height: 70px;
+  width: 70px;
+  text-align: center;
+}
+.wrapper .menu-icon{
+  display: none;
+}
+.wrapper #show-search:checked ~ .search-icon i::before{
+  content: "\f00d";
+}
+
+.wrapper .search-box{
+  position: absolute;
+  height: 100%;
+  max-width: calc(100% - 50px);
+  width: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.8s ease;
+}
+.wrapper #show-search:checked ~ .search-box{
+  opacity: 1;
+  pointer-events: auto;
+}
+.search-box input{
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 17px;
+  color: #fff;
+  background: #171c24;
+  padding: 0 100px 0 15px;
+}
+.search-box input::placeholder{
+  color: #f2f2f2;
+}
+.search-box .go-icon{
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  line-height: 60px;
+  width: 70px;
+  background: #171c24;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
+.wrapper input[type="checkbox"]{
+  display: none;
+}
+
+/* Dropdown Menu code start */
+.content .links ul{
+  position: absolute;
+  background: #171c24;
+  top: 80px;
+  z-index: -1;
+  opacity: 0;
+  visibility: hidden;
+}
+.content .links li:hover > ul{
+  top: 70px;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s ease;
+}
+.content .links ul li a{
+  display: block;
+  width: 100%;
+  line-height: 30px;
+  border-radius: 0px!important;
+}
+.content .links ul ul{
+  position: absolute;
+  top: 0;
+  right: calc(-100% + 8px);
+}
+.content .links ul li{
+  position: relative;
+}
+.content .links ul li:hover ul{
+  top: 0;
+}
+
+/* Responsive code start */
+@media screen and (max-width: 1250px){
+  .wrapper nav{
+    max-width: 100%;
+    padding: 0 20px;
+  }
+  nav .content .links{
+    margin-left: 30px;
+  }
+  .content .links li a{
+    padding: 8px 13px;
+  }
+  .wrapper .search-box{
+    max-width: calc(100% - 100px);
+  }
+  .wrapper .search-box input{
+    padding: 0 100px 0 15px;
+  }
+}
+
+@media screen and (max-width: 900px){
+  .wrapper .menu-icon{
+    display: block;
+  }
+  .wrapper #show-menu:checked ~ .menu-icon i::before{
+    content: "\f00d";
+  }
+  nav .content .links{
+    display: block;
+    position: fixed;
+    background: #14181f;
+    height: 100%;
+    width: 100%;
+    top: 70px;
+    left: -100%;
+    margin-left: 0;
+    max-width: 350px;
+    overflow-y: auto;
+    padding-bottom: 100px;
+    transition: all 0.3s ease;
+  }
+  nav #show-menu:checked ~ .content .links{
+    left: 0%;
+  }
+  .content .links li{
+    margin: 15px 20px;
+  }
+  .content .links li a,
+  .content .links li label{
+    line-height: 40px;
+    font-size: 20px;
+    display: block;
+    padding: 8px 18px;
+    cursor: pointer;
+  }
+  .content .links li a.desktop-link{
+    display: none;
+  }
+
+  /* dropdown responsive code start */
+  .content .links ul,
+  .content .links ul ul{
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    background: none;
+    max-height: 0px;
+    overflow: hidden;
+  }
+  .content .links #show-features:checked ~ ul,
+  .content .links #show-services:checked ~ ul,
+  .content .links #show-items:checked ~ ul{
+    max-height: 100vh;
+  }
+  .content .links ul li{
+    margin: 7px 20px;
+  }
+  .content .links ul li a{
+    font-size: 18px;
+    line-height: 30px;
+    border-radius: 5px!important;
+  }
+}
+
+@media screen and (max-width: 400px){
+  .wrapper nav{
+    padding: 0 10px;
+  }
+  .content .logo a{
+    font-size: 27px;
+  }
+  .wrapper .search-box{
+    max-width: calc(100% - 70px);
+  }
+  .wrapper .search-box .go-icon{
+    width: 30px;
+    right: 0;
+  }
+  .wrapper .search-box input{
+    padding-right: 30px;
+  }   
+}
+
+
+
+body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #edf3f9;
+    }
+
+    .container {
+      max-width: 100%;
+      max-height: 100%;
+      margin: 10% ;
+      padding: 20px;
+      background-color: transparent;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      
+    }
+
+    .concept {
+      margin-bottom: 20px;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    .concept h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .concept p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .concept img {
+      max-width: 90%;
+      height: 300px;
+      margin-top: 10px;
+    }
+    /* footer part */
+    .footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 30px 0;
+    }
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+    .footer-logo {
+      width: 120px;
+      margin-right: 20px;
+    }
+    .footer-content {
+      flex: 1;
+      max-width: 300px;
+      margin-bottom: 20px;
+    }
+    .footer-content h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    .footer-content p {
+      font-size: 14px;
+      line-height: 1.6;
+      opacity: 0.8;
+    }
+    .footer-line {
+      margin-top: 20px;
+      border-top: 1px solid white;
+      padding-top: 10px;
+      opacity: 0.6;
+    }
+    .footer-email {
+      margin-top: 20px;
+    }
+    .footer-email input[type="email"] {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .footer-email button {
+      background-color: #007bff;
+      color: white;
+      padding: 8px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .footer-email strong {
+      font-weight: bold;
+    }
+    .footer-social {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .footer-social a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 18px;
+    }
+    .video-section {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+      background: rgba(0, 0, 0, 0.9);
+     
+  }
+  
+  #video-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.5; /* Adjust the opacity value for the desired opacity */
+  }
+  
+  .video-overlay {
+      position: absolute;
+      top: 15%;
+    
+      
+      text-align: center;
+      color: white;
+      z-index: 0;
+      
+      width: 100%;
+  }
+  .text a
+  {
+    display: inline-block;
+    font-size: 1em;
+    background: rgba(153, 200, 238, 0.733);
+    padding: 20px 40px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 10px;
+    color: #111;
+    letter-spacing: 2px;
+    transition: 0.2s;
+    margin-right: 50%;
+  }
+  .text a:hover
+  {
+    letter-spacing: 6px;
+  }
+  .video-overlay h1 {
+      font-size: 4rem;
+      margin-bottom: 8px;
+      margin-left: 43%;
+      margin-top: 6%;
+  }
+  .video-overlay h2 {
+      font-size: 2rem;
+      margin-top: 10px;
+      margin-bottom: 5px;
+      letter-spacing: 2px;
+  }
+  .video-overlay h3 {
+      font-size: 2.5rem;
+      margin-bottom: 8px;
+      margin-left: 43%;
+      color: rgba(153, 200, 238, 0.733);
+      border-radius: 10px;
+      border-color: #fff;
+     
+  }
+  
+  
+  /* Responsive adjustments */
+  @media screen and (max-width: 768px) {
+      .video-overlay h1 {
+          font-size: 1.5rem;
+      }
+  
+      .video-overlay p {
+          font-size: 8px;
+      }
+      .video-overlay h2{
+            font-size: 1rem;
+      }
+  }
+
+  /* first part complete */
+
+  .about
+{
+      margin-top: 230px;
+      align-items: center;
+      min-height: 100vh;
+      justify-content: center;
+}
+.main
+{
+      margin: 50px auto;
+      width: 70%;
+}
+.main img{
+      max-width: 500px;
+      float: left;
+
+      border-radius: 25px;
+      border: 1px solid rgba(153, 200, 238, 0.733);
+      margin-right: 6%;
+
+}
+.main h5{
+      font-size: 3rem;
+      color: rgba(153, 200, 238, 0.733);
+
+     
+}
+.main h2{
+      font-size: 50px;
+}
+.main p
+{
+      font-size: 20px;
+}
+@media screen and (max-width: 768px) {
+      .main img {
+            max-width: 200px;
+      }
+  
+      .main h5 {
+          font-size: .8rem;
+          margin-top: -5%;
+      }
+      .main h2{
+            font-size: 12px;
+      }
+      .main p
+      {
+            font-size: 8px;
+      }
+  }
+/* about finish */
+.heading {
+      font-size: 5rem;
+      text-align: center;
+      margin-top: 10%;
+  }
+  
+  .heading span {
+      color:  rgba(153, 200, 238, 0.733);
+  }
+  
+  .heading-description {
+      text-align: center;
+      padding: 1.3rem 0;
+      font-size: 1.6rem;
+      font-weight: 300;
+      margin-bottom: 10%;
+  }
+  
+.service .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+      gap: 2rem;
+      padding: 5.5rem 0;
+      grid-row-gap: 4rem;
+      margin-top: 10%;
+      
+  }
+  
+  .service .container .service-box {
+      background: var(--white);
+      height: auto;
+      cursor: pointer;
+      box-shadow: 3px 3px 10px rgba(179, 179, 179, 0.2);
+      padding-bottom: 3rem;
+      border-radius: 10px;
+      border: 3px solid white;
+  }
+  
+  .service .container .service-box img {
+      width: 80%;
+      border-radius: 10px;
+  }
+  
+  .service .container .service-box .service-content {
+      padding: 2.5rem;
+  }
+  
+  .service .container .service-box .service-content h3 {
+      font-size: 1.5rem;
+      padding: 1.3rem 0;
+  }
+  
+  .service .container .service-box .service-content p {
+      font-size: 1.2rem;
+      padding: 1.3rem 0;
+      font-weight: 400;
+      color: var(--black);
+  }
+  
+  .service .container .service-box:hover {
+      transform: translateY(-1rem);
+  }
+  @media screen and (max-width: 768px) {
+      .heading {
+           font-size: 2.5rem;
+      }
+  
+      .heading-description{
+          font-size: .8rem;
+      
+      }
+      .main h2{
+            font-size: 12px;
+      }
+      .main p
+      {
+            font-size: 8px;
+      }
+  }
+
+  /* service finish */
+
+  /* blog */
+  .blog .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+      gap: 2rem;
+      padding: 2.5rem 0;
+      margin-bottom: 10%;
+  }
+  
+  .blog .container .post {
+      border: 0.2rem solid rgba(153, 200, 238, 0.733);
+      border-radius: 10px;
+      height: auto;
+      cursor: pointer;
+      box-shadow: 0px 0px 5px 0px grey;
+      transition: 0.4s linear all;
+      border: 3px solid white;
+  }
+  
+  .blog .container .post:hover {
+      transform: translate(0px, -5px);
+  }
+  
+  .blog .container .post .blog-img {
+      width: 80%;
+      height: auto;
+      overflow: hidden;
+      position: relative;
+      border-radius: 10px;
+    
+  }
+  
+  .blog .container .post .blog-img img {
+      width: 100%;
+      height: auto;
+  }
+  
+  .blog .container .post .blog-content {
+      padding: 2rem;
+  }
+  
+  .blog .container .post .blog-content h3 {
+      font-size: 1.6rem;
+      padding: 1.3rem 0;
+      letter-spacing: 0.1rem;
+  }
+  
+  .blog .container .post .blog-content h3 span {
+      color: rgb(153, 200, 238);
+  }
+  
+  .blog .container .post .blog-content h1 {
+      font-size: 2rem;
+      color: black;
+      padding-bottom: 2rem;
+  }
+  
+  .blog .container .post .blog-content p {
+      font-size: 1.4rem;
+      color: var(--para-font);
+  }
+  
+  .blog .container .post:hover img {
+      transform: scale(1.1);
+  }
+  
+  .blog .container .post .blog-img span {
+      position: absolute;
+      background: var(--bg);
+      bottom: 5%;
+      
+      padding: 1.2rem 1.4rem;
+      color: black;
+      text-align: center;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border-radius: 5px;
+  }
+  @media screen and (max-width: 768px) {
+      .blog .container .post .blog-img {
+           width: 60%;
+      }
+  
+      .blog .container .post .blog-img img{
+          font-size: .8rem;
+      
+      }
+      .blog .container .post .blog-content h1{
+            font-size: 1rem;
+      }
+      .blog .container .post .blog-content p
+      {
+            font-size: .8rem;
+      }
+  }
+
+  
+   /* blog ends */
+
+   #page3 {
+      height: 100vh;
+      width: 100%;
+     
+      display: flex;
+      align-items: center;
+      position: relative;
+      justify-content: center;
+    }
+    #page3 > p {
+      font-size: 35px;
+      font-weight: 700;
+      width: 60%;
+      line-height: 45px;
+      text-align: center;
+    }
+    
+    #page3 img {
+      position: absolute;
+      height: 60px;
+    }
+    #page3 #colon1 {
+      left: 15%;
+      top: 25%;
+    }
+    #page3 #colon2 {
+      bottom: 30%;
+      right: 15%;
+    }
+    @media screen and (max-width: 768px)
+    {
+      #page3 > p{
+            font-size: 20px;
+      }
+      #page3 #colon1 {
+            left: 7%;
+            top: 12%;
+          }
+          #page3 #colon2 {
+            bottom: 15%;
+            right: 10%;
+          }
+    }
+
+    /* quote ends */
+
+    /* Google Font CDN Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+.contact
+{
+      margin-top: 10%;
+}
+.container-1{
+      width: 85%;
+      background: #fff;
+      border-radius: 6px;
+      padding: 20px 60px 30px 40px;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+    .container-1 .content-1{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .container-1 .content-1 .left-side-1{
+      width: 25%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 15px;
+      position: relative;
+    }
+    .content-1 .left-side-1::before{
+      content: '';
+      position: absolute;
+      height: 70%;
+      width: 2px;
+      right: -15px;
+      top: 50%;
+     
+      background: #afafb6;
+    }
+    .content-1 .left-side-1 .details-1{
+      margin: 14px;
+      text-align: center;
+    }
+    .content-1 .left-side-1 .details-1 i{
+      font-size: 30px;
+      color: rgb(153, 200, 238);
+      margin-bottom: 10px;
+    }
+    .content-1 .left-side-1 .details-1 .topic-1{
+      font-size: 18px;
+      font-weight: 500;
+    }
+    .content-1 .left-side-1 .details-1 .text-one-1,
+    .content-1 .left-side-1 .details-1 .text-two-1{
+      font-size: 14px;
+      color: #afafb6;
+    }
+    .container-1 .content-1 .right-side-1{
+      width: 75%;
+      margin-left: 75px;
+    }
+    .content-1 .right-side-1 .topic-text-1{
+      font-size: 23px;
+      font-weight: 600;
+      color: #009bd6;
+    }
+    .right-side-1 .input-box-1{
+      height: 50px;
+      width: 100%;
+      margin: 12px 0;
+    }
+    .right-side-1 .input-box-1 input,
+    .right-side-1 .input-box-1 textarea{
+      height: 100%;
+      width: 100%;
+      border: none;
+      outline: none;
+      font-size: 16px;
+      background: #F0F1F8;
+      border-radius: 6px;
+      padding: 0 15px;
+      resize: none;
+    }
+    .right-side-1 .message-box-1{
+      min-height: 110px;
+    }
+    .right-side-1 .input-box-1 textarea{
+      padding-top: 6px;
+    }
+    .right-side-1 .button-1{
+      display: inline-block;
+      margin-top: 12px;
+    }
+    .right-side-1 .button-1 input[type="button"]{
+      color: #fff;
+      font-size: 18px;
+      outline: none;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      background: #009bd6;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .button-1 input[type="button"]:hover{
+      background: #009bd6;
+    }
+    
+    @media (max-width: 950px) {
+      .container-1{
+        width: 90%;
+        padding: 30px 40px 40px 35px ;
+      }
+      .container-1 .content-1 .right-side-1{
+       width: 75%;
+       margin-left: 55px;
+    }
+    }
+    @media (max-width: 820px) {
+      .container-1{
+        margin: 40px 0;
+        height: 100%;
+      }
+      .container-1 .content-1{
+        flex-direction: column-reverse;
+      }
+     .container-1 .content-1 .left-side-1{
+       width: 100%;
+       flex-direction: row;
+       margin-top: 40px;
+       justify-content: center;
+       flex-wrap: wrap;
+     }
+     .container-1.content-1 .left-side-1::before{
+       display: none;
+     }
+     .container-1 .content-1 .right-side-1{
+       width: 100%;
+       margin-left: 0;
+     }
+    }
+    
+    /* contact page ends */
+
+    
+    /* navbar css */
+    .footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 30px 0;
+     
+      margin-top: 10%;
+    }
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+    .footer-logo {
+      width: 120px;
+      margin-right: 20px;
+    }
+    .footer-content {
+      flex: 1;
+      max-width: 300px;
+      margin-bottom: 20px;
+    }
+    .footer-content h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    .footer-content p {
+      font-size: 14px;
+      line-height: 1.6;
+      opacity: 0.8;
+    }
+    .footer-line {
+      margin-top: 20px;
+      border-top: 1px solid white;
+      padding-top: 10px;
+      opacity: 0.6;
+    }
+    .footer-email {
+      margin-top: 20px;
+    }
+    .footer-email input[type="email"] {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .footer-email button {
+      background-color: #007bff;
+      color: white;
+      padding: 8px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .footer-email strong {
+      font-weight: bold;
+    }
+    .footer-social {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .footer-social a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 18px;
+    }
+
+    /* video partr*/
+
+</style>
+<body>
+      <div class="wrapper">
+            <nav>
+              <input type="checkbox" id="show-search">
+              <input type="checkbox" id="show-menu">
+              <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
+              <div class="content">
+              <div class="logo"><a href="#">Finance <h3>Castle</h3></a></div>
+                <ul class="links">
+                  
+                  <li>
+                    <a href="{% url 'home' %}" class="desktop-link">Investing</a>
+                    <input type="checkbox" id="show-features">
+                    <label for="show-features">Investing</label>
+                    <ul>
+                        <li><a href="{% url 'stocks' %}">Stocks</a></li>
+                        <li><a href="{% url 'bonds' %}">Bonds</a></li>
+                        <li><a href="{% url 'etfs' %}">ETF's</a></li>
+                        <li><a href="{% url 'foreign' %}">Foreign Exchange</a></li>
+                        <li><a href="{% url 'mutualfunds' %}">Mutual Funds</a></li>
+                    </ul>
+                    
+                 <li>
+                    <a href="#" class="desktop-link">Analysis</a>
+                    <input type="checkbox" id="show-features">
+                    <label for="show-features">Analysis</label>
+                    <ul>
+                       <li><a href="{% url 'funds' %}">Fundamental Analysis</a></li>
+                            <li><a href="{% url 'intrest' %}">Interest Rate</a></li>
+                            <li><a href="{% url 'gdp' %}">GDP</a></li>
+                            <li><a href="{% url 'inflation' %}">Inflation Rate</a></li>
+                            <li><a href="{% url 'importing' %}">Import/Export</a></li>
+                            <li><a href="{% url 'manu' %}">Manufacturing Sector</a></li>
+                            
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#" class="desktop-link">Fundamental Analysis</a>
+                    <input type="checkbox" id="show-features">
+                    <label for="show-features">Fundamental Analysis</label>
+                    <ul>
+                          <li><a href="{% url 'governmentpolicy' %}">Goverment Policy</a></li>
+                          <li><a href="{% url 'monetrypolicy' %}">Monetry Policy</a></li>
+                          <li><a href="{% url 'fiscalpolicy' %}">Fiscal Policy</a></li>
+                          
+                            
+                    </ul>
+                  </li><li>
+                    <a href="#" class="desktop-link">Personal Finance</a>
+                    <input type="checkbox" id="show-features">
+                    <label for="show-features">Personal Finance</label>
+                    <ul>
+                          <li><a href="{% url 'literacy' %}">Financial Literacy</a></li>
+                          <li><a href="{% url 'retirement' %}">Retirement</a></li>
+                          <li><a href="{% url 'budget' %}">Personal Budget</a></li>
+                          <li><a href="{% url 'savings' %}">Savings</a></li>
+                          <li><a href="{% url 'taxes' %}">Taxes</a></li>
+                          <li><a href="{% url 'loan' %}">Loans</a></li>
+                            
+                    </ul>
+                  </li><li>
+                    <a href="#" class="desktop-link">News</a>
+                    <input type="checkbox" id="show-features">
+                    <label for="show-features">News</label>
+                    <ul>
+                          <li><a href="{% url 'market' %}">Market</a></li>
+                          <li><a href="{% url 'companies' %}">Companies</a></li>
+                          <li><a href="{% url 'economy' %}">Economy </a></li>
+                          <li><a href="{% url 'political' %}">Political</a></li>
+                          <li><a href="{% url 'government' %}">Goverment</a></li>
+                          <li><a href="{% url 'worldwide' %}">WorldWide</a></li>
+                            
+                    </ul>
+                  </li><li>
+                    <a href="#" class="desktop-link">Learning</a>
+                    <input type="checkbox" id="show-features">
+                    <label for="show-features">Learning</label>
+                    <ul>
+                     
+                      <li><a href="{% url 'beginners' %}">Investing for beginners</a></li>
+                      <li><a href="{% url 'fanalysis' %}">Fundamental Analysis</a></li>
+                      <li><a href="{% url 'trading' %}">All Trading Courses</a></li>
+                      <li><a href="{% url 'investing' %}">All Investing Courses</a></li>
+                            
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="{% url 'signuppage' %}">Contact Us</a>
+                  </li>
+                  <li>
+                    <a href="https://live-stocks-whtt.onrender.com/" style="color: red; text-decoration: underline;">Stock Price Prediction</a>
+                  </li>  
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              
+            </nav>
+          </div>
+    <!-- navbar ends -->
+    
+  
+<section id="section">
+  <!-- TradingView Widget BEGIN -->
+  <marquee behavior="alternate" height="70px" >
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <div class="tradingview-widget-copyright"><a href="https://in.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
+  
+  
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>
+  {
+  "symbols": [
+    {
+      "proName": "FOREXCOM:SPXUSD",
+      "title": "S&P 500"
+    },
+    {
+      "proName": "BITSTAMP:BTCUSD",
+      "title": "Bitcoin"
+    },
+    {
+      "proName": "BITSTAMP:ETHUSD",
+      "title": "Ethereum"
+    },
+    {
+      "description": "",
+      "proName": "BSE:SENSEX"
+    },
+    {
+      "description": "",
+      "proName": "FX_IDC:USDINR"
+    }
+  ],
+  "colorTheme": "light",
+  "isTransparent": false,
+  "showSymbolLogo": true,
+  "locale": "in"
+}
+
+  </script>
+</div>
+</marquee>
+<!-- TradingView Widget END -->
+<header>
+  
+  <div class="menu-btn"></div>
+  <div class="navigation">
+      <div class="navigation-items">
+          
+      </div>
+  </div>
+</header>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: "Poppins", sans-serif;
+}
+
+header{
+z-index: 999;
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 15px 200px;
+transition: 0.5s ease;
+}
+
+header .brand{
+color: #fff;
+font-size: 1.5rem;
+font-weight: 700;
+text-transform: uppercase;
+text-decoration: none;
+}
+
+header .brand:hover{
+color: #007bff;
+}
+
+header .navigation{
+position: relative;
+}
+
+header .navigation .navigation-items a{
+position: relative;
+color: #fff;
+font-size: 1em;
+font-weight: 500;
+text-decoration: none;
+margin-left: 30px;
+transition: 0.3s ease;
+}
+
+header .navigation .navigation-items a:before{
+content: '';
+position: absolute;
+background: #fff;
+width: 0;
+height: 3px;
+bottom: 0;
+left: 0;
+transition: 0.3s ease;
+}
+
+header .navigation .navigation-items a:hover:before{
+width: 100%;
+background: #007bff;
+}
+
+
+
+.home{
+position: relative;
+width: 100%;
+min-height: 100vh;
+display: flex;
+justify-content: center;
+flex-direction: column;
+background:black;
+}
+
+.home:before{
+z-index: 777;
+content: '';
+position: absolute;
+background: rgba(251, 3, 3, 0.034);
+width: 100%;
+height: 100%;
+top: 0;
+left: 0;
+}
+
+.home .con{
+z-index: 888;
+color: #fff;
+width: 70%;
+margin-top: 50px;
+display: none;
+margin-left: 10%;
+}
+
+.home .con.active{
+display: block;
+}
+
+.home .con h1{
+font-size: 4em;
+font-weight: 900;
+text-transform: uppercase;
+letter-spacing: 5px;
+line-height: 75px;
+margin-bottom: 40px;
+}
+
+.home .con h1 span{
+font-size: 1.2em;
+font-weight: 600;
+color: #007bff;
+}
+
+.home .con p{
+margin-bottom: 65px;
+font-size: 21px;
+}
+
+.home .con a{
+background: #fff;
+padding: 15px 35px;
+color:#007bff;
+font-size: 1.1em;
+font-weight: 500;
+text-decoration: none;
+border-radius: 2px;
+}
+.home .media-icons{
+z-index: 888;
+position: absolute;
+right: 30px;
+display: flex;
+flex-direction: column;
+transition: 0.5s ease;
+}
+
+.home .media-icons a{
+color: #fff;
+font-size: 1.6em;
+transition: 0.3s ease;
+}
+
+.home .media-icons a:not(:last-child){
+margin-bottom: 20px;
+}
+
+.home .media-icons a:hover{
+transform: scale(1.3);
+color: #007bff;
+}
+
+.home video{
+z-index: 000;
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+object-fit: cover;
+opacity: .7;
+}
+
+.slider-navigation{
+z-index: 888;
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+transform: translateY(80px);
+margin-bottom: 12px;
+}
+
+.slider-navigation .nav-btn{
+width: 12px;
+height: 12px;
+background: #fff;
+border-radius: 50%;
+cursor: pointer;
+box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
+transition: 0.3s ease;
+}
+
+.slider-navigation .nav-btn.active{
+background: #007bff;
+}
+
+.slider-navigation .nav-btn:not(:last-child){
+margin-right: 20px;
+}
+
+.slider-navigation .nav-btn:hover{
+transform: scale(1.2);
+}
+
+.video-slide{
+position: absolute;
+width: 100%;
+clip-path: circle(0% at 0 50%);
+}
+
+.video-slide.active{
+clip-path: circle(150% at 0 50%);
+transition: 2s ease;
+transition-property: clip-path;
+}
+
+@media (max-width: 1040px){
+header{
+  padding: 12px 20px;
+}
+section{
+  padding: 100px 20px;
+}
+
+.home .media-icons{
+  right: 15px;
+}
+
+header .navigation{
+  display: none;
+}
+
+header .navigation.active{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(1, 1, 1, 0.5);
+}
+
+header .navigation .navigation-items a{
+  color: #222;
+  font-size: 1.2em;
+  margin: 20px;
+}
+
+header .navigation .navigation-items a:before{
+  background: #222;
+  height: 5px;
+}
+header .navigation.active .navigation-items{
+background: #fff;
+width: 600px;
+max-width: 600px;
+margin: 20px;
+padding: 40px;
+display: flex;
+flex-direction: column;
+align-items: center;
+border-radius: 5px;
+box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
+}
+
+.menu-btn{
+background: url(menu.png)no-repeat;
+background-size: 30px;
+background-position: center;
+width: 40px;
+height: 40px;
+cursor: pointer;
+transition: 0.3s ease;
+}
+
+.menu-btn.active{
+z-index: 999;
+background: url(close.png)no-repeat;
+background-size: 25px;
+background-position: center;
+transition: 0.3s ease;
+}
+}
+
+@media (max-width: 560px){
+.home .con h1{
+  font-size: 3em;
+  line-height: 60px;
+}
+}
+</style>
+
+<section class="home">
+  
+  <video class="video-slide active" src="../static/image/161241 (720p).mp4" autoplay muted loop></video>
+  <video class="video-slide " src="../static/image/pay_-_20857 (1440p).mp4" autoplay muted loop></video>
+  <video class="video-slide" src="../static/image/animation_-_7529 (720p).mp4" autoplay muted loop></video>
+  <video class="video-slide" src="../static/image/pay_-_20857 (1440p).mp4" autoplay muted loop></video>
+  <video class="video-slide" src="../static/image/money_-_50628 (720p).mp4" autoplay muted loop></video>
+  <div class="con ">
+    <h1>Finance is  <br><span>Huge Umbrella</span></h1>
+<p>
+  Personal finance is a vast and all-encompassing umbrella that covers a wide range <br> of financial aspects in an individual's life. It extends beyond mere budgeting and <br>includes elements such as managing debt, making wise investments, saving for <br>retirement, understanding insurance, and  even navigating the complex world of <br> taxes. 
+</p>    <a href="../templates/home.html">EXPLORE</a>  
+  </div>
+  <div class="con active">
+    <h1>Money<br><span>Matters</span></h1>
+<p>
+  "Money matters" encapsulate the essential facets of financial management and decision-making in our lives. It revolves around earning, spending, saving, investing, and protecting our finances. 
+</p>
+<a href="../templates/home.html">EXPLORE</a>
+  </div>
+  <div class="con">
+    <h1>Investment<br><span>Essentials</span></h1>
+<p>"Investment Essentials" encompasses the fundamental principles and strategies required to build and manage a successful investment portfolio. It involves understanding risk tolerance, diversification, asset allocation, and the various investment vehicles available, from stocks and bonds to real estate and cryptocurrencies. </p>
+<a href="../templates/home.html">EXPLORE</a>
+  </div>
+  <div class="con">
+    <h1>Financial<br><span>Freedom</span></h1>
+<p>
+  "Financial Freedom" signifies a state where an individual has the autonomy and resources to make life choices without being constrained by financial limitations. It's about achieving a level of financial stability that allows for pursuing personal passions, attaining life goals, and enjoying peace of mind.
+</p>
+<a href="../templates/home.html">EXPLORE</a>
+  </div>
+  <div class="con">
+    <h1>Wealth<br><span>Building</span></h1>
+<p>
+  "Wealth Building" is the deliberate and strategic process of accumulating assets and financial resources over time to secure a prosperous future. It involves careful financial planning, disciplined saving, and smart investment decisions aimed at increasing one's net worth.
+</p>
+    <a href="../templates/home.html">EXPLORE</a>
+  </div>
+  <div class="media-icons">
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+  </div>
+  <div class="slider-navigation">
+    <div class="nav-btn active"></div>
+    <div class="nav-btn"></div>
+    <div class="nav-btn"></div>
+    <div class="nav-btn"></div>
+    <div class="nav-btn"></div>
+  </div>
+</section> 
+<script>
+      const menuBtn = document.querySelector(".menu-btn");
+const navigation = document.querySelector(".navigation");
+
+menuBtn.addEventListener("click", () => {
+menuBtn.classList.toggle("active");
+navigation.classList.toggle("active");
+});
+
+const btns = document.querySelectorAll(".nav-btn");
+const slides = document.querySelectorAll(".video-slide");
+const contents = document.querySelectorAll(".con");
+
+var sliderNav = function(manual){
+btns.forEach((btn) => {
+  btn.classList.remove("active");
+
+});
+
+slides.forEach((slide) => {
+slide.classList.remove("active");
+});
+
+contents.forEach((con) => {
+con.classList.remove("active");
+});
+
+btns[manual].classList.add("active");
+slides[manual].classList.add("active");
+contents[manual].classList.add("active");
+}
+
+btns.forEach((btn, i) => {
+btn.addEventListener("click", () => {
+  sliderNav(i);
+});
+});
+</script>
+
+<!--       first part complete -->
+
+<section class="about">
+  <div class="main">
+       <img src="../static/image/1.jpg" alt="">
+        <div class="about-text">
+              <h5>ABOUT US</h5>
+              <br>
+              <br>
+              <h2>Our Work Promise <br> Uphold The <br> Trust Placed</h2>
+              <br>
+              <br>
+                   <p>
+                    Our team of experts is tirelessly devoted to ensuring that the content and advice we offer are of the highest quality, empowering you to make informed financial choices. We pledge to remain transparent, acting in your best interests while maintaining the utmost integrity and professionalism.
+                   </p>
+        </div>
+  </div> 
+   
+
+  <section class="service">
+        <section class="service" id="service">
+              <h1 class="heading">Our <span>Services</span></h1>
+              <p class="heading-description">We Provide Our Services    24x7 = 360</p>
+              <div class="container">
+                  <div class="service-box">
+                      <div class="service-img">
+                          <img src="../static/image/2.jpg" alt="">
+                      </div>
+                      <div class="service-content">
+                          <h3>Financial Education and Workshops:</h3>
+                         <p>
+                          "Financial Education and Workshops: We're your source for empowering financial knowledge. Join us for insightful workshops and resources designed to enhance your financial literacy. Take control of your financial future with our expert guidance and valuable insights."
+                         </p>
+                      </div>
+                  </div>
+                  <div class="service-box">
+                      <div class="service-img">
+                          <img src="../static/image/3.jpg" alt="">
+                      </div>
+                      <div class="service-content">
+                          <h3>Insurance Services</h3>
+                          <p>"Insurance Services: Protect what matters most with our comprehensive insurance solutions. We offer a range of insurance options tailored to your needs, ensuring peace of mind for you and your loved ones. Safeguard your future today with our trusted insurance services."</p>
+                      </div>
+                  </div>
+                  <div class="service-box">
+                      <div class="service-img">
+                          <img src="../static/image/4.jpg" alt="">
+                      </div>
+                      <div class="service-content">
+                          <h3>Retirement Planning</h3>
+                          <p>
+                            "Retirement Planning: Secure your golden years with our expert guidance. Plan for a comfortable and worry-free retirement with our personalized strategies and insights. Start building your retirement nest egg today for a brighter tomorrow."
+                          </p>
+                      </div>
+                  </div>
+                  <div class="service-box">
+                        <div class="service-img">
+                          <img src="../static/image/5.jpg" alt="">
+                        </div>
+                        <div class="service-content">
+                            <h3>Tax Planning and Preparation</h3>
+                          <p>
+                            
+"Tax Resolution Services: Resolve tax challenges with confidence. Our experienced team is here to help you navigate tax issues, find solutions, and regain financial peace of mind. Trust us to tackle your tax concerns effectively and efficiently."
+                          </p>
+                        </div>
+                    </div>
+                    <div class="service-box">
+                      <div class="service-img">
+                          <img src="../static/image/11.jpg" alt="">
+                      </div>
+                      <div class="service-content">
+                          <h3>Tax Resolution Services</h3>
+                          <p>
+                            
+"Tax Resolution Services: Resolve tax challenges with confidence. Our experienced team is here to help you navigate tax issues, find solutions, and regain financial peace of mind. Trust us to tackle your tax concerns effectively and efficiently."
+                          </p>
+                      </div>
+                  </div>
+                  <div class="service-box" a>
+                      <div class="service-img">
+                          <img src="../static/image/15.jpg" alt="">
+                      </div>
+                      <a href="../static/css/home1.css"></a>
+                      <div class="service-content">
+                          <h3>Financial Coaching</h3>
+                          
+                          <p>
+                            "Financial Coaching: Empower your financial journey with personalized guidance. Our expert coaches are dedicated to helping you achieve your financial goals, build wealth, and make informed decisions. Take control of your finances with our supportive coaching services."
+                          </p>
+                      </div>
+                  </div>
+                 
+                  </div>
+              </div>
+          </section>
+  
+
+  </section>
+
+  <!-- service finsish -->
+
+  <section class="blog" id="blog">
+        <h1 class="heading">Our <span>Blog</span></h1>
+        <p class="heading-description">Read our blog and know more about our latest update..</p>
+        <div class="container">
+            <div class="post">
+                <div class="blog-img">
+                    <img src="../static/image/11.jpg" alt="">
+                    <span>12 <br> Feb </span>
+                </div>
+                <div class="blog-content">
+                    <h3>By Fintech Specialist |<span> Ashutosh Shukla</span></h3>
+                    <h1>Mastering Personal Finance</h1>
+                    <p>
+                      "Mastering Personal Finance: Unlock financial success with expert guidance. Our comprehensive resources and insights empower you to take control of your finances, make savvy decisions, and achieve your financial goals. Start mastering personal finance with us today."
+                    </p>
+                </div>
+            </div>
+            <div class="post">
+                <div class="blog-img">
+                    <img src="../static/image/16.jpg" alt="">                        <span>19 <br> June </span>
+                </div>
+                <div class="blog-content">
+                    <h3>By Admin |<span> Ashutosh Shukla</span></h3>
+                    <h1>The Art of Budgeting</h1>
+                   <p>
+                    "The Art of Budgeting: Craft a solid financial foundation with our budgeting expertise. Discover the art of managing your finances, achieving financial stability, and reaching your goals through effective budgeting strategies. Let us guide you on your budgeting journey."
+                   </p>
+                </div>
+            </div>
+            <div class="post">
+                <div class="blog-img">
+                    <img src="../static/image/13.jpg" alt="">                        <span>26<br> Oct </span>
+                </div>
+                <div class="blog-content">
+                    <h3>By Finance Manager |<span> Ashutosh Shukla</span></h3>
+                    <h1>Smart Money Moves</h1>
+                    <p>
+                      
+"Smart Money Moves: Make your money work smarter, not harder. Explore wise financial decisions, investments, and strategies to grow your wealth and secure your future. Start making smart money moves today."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Blog Section End-->
+
+    <section class="s2">
+      <div id="page3">
+            <p>
+              "Money is only a tool. It will take you wherever you wish, but it will not replace you as the driver."-- Ashutosh Shukla
+            </p>
+            <img
+              id="colon1"
+              src="https://eiwgew27fhz.exactdn.com/wp-content/themes/puttosaurus/img/quote-left.svg"
+              alt=""
+            />
+            <img
+              id="colon2"
+              src="https://eiwgew27fhz.exactdn.com/wp-content/themes/puttosaurus/img/quote-right.svg"
+              alt=""
+            />
+          </div>
+  </section>
+</section>
+
+<section class="contact">
+<div class="container-1">
+      <div class="content-1">
+        <div class="left-side-1">
+          <div class="address details-1">
+            <i class="fas fa-map-marker-alt"></i>
+            <div class="topic-1">Address</div>
+            <div class="text-one-1">Awadhpuri,Bhopal</div>
+            <div class="text-two-1">462002</div>
+          </div>
+          <div class="phone details-1">
+            <i class="fas fa-phone-alt"></i>
+            <div class="topic-1">Phone</div>
+            <div class="text-one-1">+91 7441119548</div>
+            <div class="text-two-1">+000000000</div>
+          </div>
+          <div class="email details-1">
+            <i class="fas fa-envelope"></i>
+            <div class="topic-1">Email</div>
+            <div class="text-one-1">financecastle@gmail.com</div>
+            <div class="text-two-1">info.financecastle@gmail.com</div>
+          </div>
+        </div>
+        <div class="right-side-1">
+          <div class="topic-text-1">Send us a message</div>
+          <p>If you have any work from me or any types of queries related to my finance, you can send me message from here. It's my pleasure to help you.</p>
+       
+       
+       
+          <form  method="POST" action="">
+           {% csrf_token %}
+          <div class="input-box-1">
+            <input type="text" name="name" placeholder="Enter your name">
+          </div>
+          <div class="input-box-1">
+           
+            <input type="email"  name="emails" placeholder="Enter your email">
+          </div>
+  
+          <div class="input-box-1 message-box-1">
+                      <input type="text"  name="mess" placeholder="Enter your message">
+  
+          </div>
+          <div class="button-1">
+            <input type="submit" value="Send Now"  >
+          </div>
+        </form>
+
+
+      </div>
+      </div>
+    </div>
+</section>
+<!-- footer -->
+<div class="footer">
+  <div class="footer-container">
+    
+    <div class="footer-content">
+      <h2>About Us</h2>
+      <p>
+        At Finance Castle, we are driven by a passion for empowering individuals to take control of their financial futures. Established with a vision to demystify finance, we believe that financial literacy is the key to achieving financial success and security.
+      </p>
+    </div>
+    <div class="footer-content">
+      <h2>Partnership</h2>
+<p>
+  We engage with industry experts and financial influencers to provide you with diverse perspectives and insights into the world of finance. These partnerships enrich our content and keep you informed about emerging trends and best practices.
+</p>    </div>
+    <div class="footer-content">
+      <h2>Support</h2>
+<p>
+  
+
+
+At finance castle, we are committed to providing exceptional support to our users. Whether you have questions about our content, need assistance with financial tools, or require help with a specific financial issue, we're here to assist you. 
+</p>    </div>
+  </div>
+  <div class="footer-line"></div>
+  <div class="footer-email">
+    <h2><strong>Subscribe to Our Newsletter</strong></h2>
+    <p>Stay up to date with our latest news and updates.</p>
+    <form method="POST" action='{% url "home" %}' >
+      {% csrf_token %}
+      <input type="email" name="message" placeholder="Your Email" style="font-weight: bold; background-color: rgb(178, 178, 206);">
+      <input type="text" name="message1" placeholder="Your Message" style="font-weight: bold; width:100%; height:100px; background-color: rgb(178, 178, 206);">
+
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+  <div class="footer-social">
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+  </div>
+  <p>All rights reserved &copy; 2023</p>
+  </div>
+  <script src="../static/js/home.js" defer data-deferred="1"></script>
+  </body>
+  </html>
+
+
+</body>
+</html>
+

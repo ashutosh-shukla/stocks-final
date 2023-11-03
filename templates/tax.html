@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+<style>
+  .image-container {
+    margin:100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:80%;
+    height: 300px; /* Adjust the height as needed */
+    background-color: #f0f0f0; /* Background color of the container */
+  }
+
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+    border: 2px solid #333; /* Add a border */
+    border-radius: 10px; /* Add rounded corners */
+  }
+</style>
+
+<div class="container">
+  <div class="concept">
+    <h2>Bond: Financial Meaning With Examples and <br>  How They Are Priced</h2>
+<p>
+A bond is a fixed-income instrument that represents a loan made by an investor to a borrower (typically corporate or governmental). A bond could be thought of as an I.O.U. between the lender and borrower that includes the details of the loan and its payments. Bonds are used by companies, municipalities, states, and sovereign governments to finance projects and operations. Owners of bonds are debtholders, or creditors, of the issuer.
+<br>
+Bond details include the end date when the principal of the loan is due to be paid to the bond owner and usually include the terms for variable or fixed interest payments made by the borrower.
+
+
+</p>   
+<div class="image-container">
+  <img src="{% static 'image/1.jpg' %}" alt="Image Description">
+</div>
+
+  </div>
+  <div class="concept">
+    <h2>Who Issues Bonds?</h2>
+<p>
+Bonds are debt instruments and represent loans made to the issuer. Governments (at all levels) and corporations commonly use bonds in order to borrow money. Governments need to fund roads, schools, dams, or other infrastructure. The sudden expense of war may also demand the need to raise funds.
+<br>
+<br>
+Similarly, corporations will often borrow to grow their business, to buy property and equipment, to undertake profitable projects, for research and development, or to hire employees. The problem that large organizations run into is that they typically need far more money than the average bank can provide.
+<br>
+<br>
+Bonds provide a solution by allowing many individual investors to assume the role of the lender. Indeed, public debt markets let thousands of investors each lend a portion of the capital needed. Moreover, markets allow lenders to sell their bonds to other investors or to buy bonds from other individuals—long after the original issuing organization raised capital.
+</p>     
+<div class="image-container">
+  <img src="{% static 'image/5.jpg' %}" alt="Image Description">
+</div>  </div>
+  <div class="concept">
+    <h2>How Bonds Work</h2>
+<p>
+Bonds are commonly referred to as fixed-income securities and are one of the main asset classes that individual investors are usually familiar with, along with stocks (equities) and cash equivalents.
+
+When companies or other entities need to raise money to finance new projects, maintain ongoing operations, or refinance existing debts, they may issue bonds directly to investors. The borrower (issuer) issues a bond that includes the terms of the loan, interest payments that will be made, and the time at which the loaned funds (bond principal) must be paid back (maturity date). The interest payment (the coupon) is part of the return that bondholders earn for loaning their funds to the issuer. The interest rate that determines the payment is called the coupon rate.
+<br>
+<br>
+
+The initial price of most bonds is typically set at at par, or $1,000 face value per individual bond. The actual market price of a bond depends on a number of factors: the credit quality of the issuer, the length of time until expiration, and the coupon rate compared to the general interest rate environment at the time. The face value of the bond is what will be paid back to the lender once the bond matures.
+<br>
+<br>
+
+Most bonds can be sold by the initial bondholder to other investors after they have been issued. In other words, a bond investor does not have to hold a bond all the way through to its maturity date. It is also common for bonds to be repurchased by the borrower if interest rates decline, or if the borrower’s credit has improved, and it can reissue new bonds at a lower cost.
+</p>       
+<div class="image-container">
+  <img src="{% static 'image/3.jpg' %}" alt="Image Description">
+</div>
+  </div>
+  <div class="concept">
+    <h2>
+      Bond Prices and Interest Rates
+    </h2>
+<p>
+This is why the famous statement that a bond’s price varies inversely with interest rates works. When interest rates go up, bond prices fall in order to have the effect of equalizing the interest rate on the bond with prevailing rates, and vice versa.
+<br>
+<br>
+Another way of illustrating this concept is to consider what the yield on our bond would be given a price change, instead of given an interest rate change. For example, if the price were to go down from $1,000 to $800, then the yield goes up to 12.5%.
+<br>
+<br>
+This happens because you are getting the same guaranteed $100 on an asset that is worth $800 ($100/$800). Conversely, if the bond goes up in price to $1,200, the yield shrinks to 8.33% ($100/$1,200).
+
+
+</p>       
+<div class="image-container">
+  <img src="{% static 'image/4.jpg' %}" alt="Image Description">
+</div>
+  </div>
+</div>
+{% endblock %}

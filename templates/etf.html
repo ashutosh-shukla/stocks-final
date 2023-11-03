@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+<style>
+  .image-container {
+    margin:100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:80%;
+    height: 400px; /* Adjust the height as needed */
+    background-color: #f0f0f0; /* Background color of the container */
+  }
+
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+    border: 2px solid #333; /* Add a border */
+    border-radius: 10px; /* Add rounded corners */
+  }
+</style>
+
+<div class="container">
+  <div class="concept">
+    <h2>About Exchange Traded Funds (ETFs)</h2>
+<p>
+ETFs are just what their name implies: baskets of securities (Indices) that are traded, like individual stocks, on an exchange. Unlike regular open-end mutual funds, ETFs can be bought and sold throughout the trading day like any stock. ETFs have lower cost of transactions and annual changes compared to index funds. ETFs are considered a safer product for risk averse and first-time investors who want market linked returns.
+<br>
+<br>
+The Exchange traded funds (ETFs) began their journey in India way back in 2002, when the first ETF by Nippon India Mutual fund (erstwhile Benchmark Asset Management Company Ltd) was launched in India on the Nifty 50 Index. The ETF was listed on NSE on January 8, 2002 and day one witnessed trading of Rs. 1.30 crores on NSE.  
+<br>
+<br>
+The journey to listing of the 100th ETF on NSE took more than 19 years. Last one-year period has seen a lot of activity in the ETF space, with 21 ETFs getting listed on NSE. The assets under management of ETFs in India is now at Rs. 3.16 lakh crores (end of May 2021), witnessing more than 13.8 times increase in five years, as compared to Rs. 23,000 crores (end of April 2016).
+</p>   
+<div class="image-container">
+  <img src="{% static 'image/2.jpg' %}" alt="Image Description">
+</div>
+  </div>
+  <div class="concept">
+    <h2>How do ETFs Work?</h2>
+<p>
+The assets that are underlying are owned by the fund provider, who then forms a fund to track the performance and offers shares in that fund to investors. Shareholders own a part of an ETF but not the fund's assets.
+<br>
+<br>
+Investors in an ETF that tracks a stock index may get lump dividend payments or reinvestments for the index's constituent firms.
+<br>
+<br>
+Here's a quick rundown of how ETFs work-
+
+An ETF provider takes into account the universe of assets, such as stocks, bonds, commodities, or currencies, and builds a basket of them, each with its own ticker.
+Investors can buy a share in that basket in the same way they would buy stock in a firm.
+Like a stock, buyers and sellers trade the ETF on an exchange throughout the day.
+
+</p>     
+<div class="image-container">
+  <img src="{% static 'image/1.jpg' %}" alt="Image Description">
+</div>
+</div>
+  <div class="concept">
+    <h2>Advantages of ETF's</h2>
+<p>The advantages of ETFs
+
+<br>
+<br>
+Simple to Trade- Unlike other mutual funds, which trade at the end of the day, you could buy and sell at any time of day. 
+<br>
+<br>
+Transparency- The majority of ETFs are required to report their holdings on a daily basis.
+ETFs are more tax efficient than actively managed mutual funds because they generate less capital gain distributions.
+
+<br>
+<br>
+
+Trading Transaction- Since they are traded like stocks, investors can place order types (e.g., limit orders or stop-loss orders) that mutual funds cannot.</p>
+<div class="image-container">
+  <img src="{% static 'image/3.jpg' %}" alt="Image Description">
+</div>  </div>
+</div>
+
+{% endblock %}
