@@ -32,7 +32,7 @@ SECRET_KEY = 'django-insecure-1j=9l=c2--!pfv3nkh*w346!mktl$2n%t9su!^h_kyt5n6hpgr
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 EMAIL_DEBUG = True
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['finance-castle.onrender.com']
 
 
 
