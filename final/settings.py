@@ -30,7 +30,7 @@ EMAIL_PORT = 587
 SECRET_KEY = 'django-insecure-1j=9l=c2--!pfv3nkh*w346!mktl$2n%t9su!^h_kyt5n6hpgr'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 EMAIL_DEBUG = True
 ALLOWED_HOSTS = ['finance-castle.onrender.com','127.0.0.1:8000','127.0.0.1']
 
